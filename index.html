@@ -12,10 +12,32 @@
 </head>
 <body>
   <div class="container mt-4">
+
     <h1 class="display-4 text-center">
       <i class="fas fa-book-open text-primary"></i> My <span class="text-primary">Library</span>
     </h1>
-    <form id="book-form">
+
+    <table class="table table-striped mt-5">
+      <thead>
+        <tr>
+          <th>Author</th>
+          <th>Title</th>
+          <th>Pages</th>
+          <th>Status</th>
+          <th>Change status</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+
+      <tbody id="book-list">
+
+      </tbody>
+    </table>
+
+    <button id="new_book" class="btn btn-primary">Add New Book</button>
+
+    <form id="book_form" class="mt-5">
+      <hr>
       <div class="form-group">
         <label for="author">Author</label>
         <input type="text" id="author" class="form-control" placeholder="Author">
@@ -25,8 +47,8 @@
         <input type="text" id="title" class="form-control" placeholder="Title">
       </div>
       <div class="form-group">
-        <label for="pages">No of pages</label>
-        <input type="number" id="pages" class="form-control" placeholder="No of pages">
+        <label for="pages">Pages</label>
+        <input type="number" id="pages" class="form-control" placeholder="Pages">
       </div>
       <div class="form-group">
         <label for="status">Read: </label>
@@ -34,6 +56,7 @@
       </div>
       <input type="submit" value="Submit" class="btn btn-primary">
     </form>
+
   </div>
 
 
