@@ -79,5 +79,43 @@ const libraryModule = ((library) => {
   return { addBook, display, toLocalStorage };
 })(getSavedLibrary());
 
+const formModule = ((library) => {
+  const form = document.getElementById('book_form');
+
+  function setValues(book, el) {
+    book.author = el.author.value;
+    book.title = el.title.value;
+    book.pages = el.pages.value;
+    book.status = el.status.checked;
+  }
+
+  function clearValues(el) {
+    el.title.value = '';
+    el.author.value = '';
+    el.pages.value = '';
+    el.status.checked = false;
+  }
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const book = new Book();
+    setValues(book, event.target.elements);
+    library.addBook(book);
+    library.toLocalStorage();
+    library.display();
+    clearValues(event.target.elements);
+  });
+
+  return { form };
+})(libraryModule);
+
+const bookButton = (form) => {
+  const button = document.getElementById('new_book');
+  button.addEventListener('click', () => {
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
+  });
+};
+
 
 libraryModule.display();
+bookButton(formModule.form);
