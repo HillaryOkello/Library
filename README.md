@@ -2,7 +2,7 @@
 
 # LIBRARY
 
-![Top Page Screenshot](./mylibrary.png)
+![Top Page Screenshot](./assets/images/mylibrary.png)
 Library developed in Javascript where you can add new books, remove the books created and change the status of the book, from read to not read.
 
 ## Table of Contents
