@@ -39,7 +39,7 @@ After creating the book, you can:
 
 ## Live Demo
 
-[Live Demo Link](https://hillary-library.netlify.app/)
+[Live Demo Link](https://jovial-lamport-0da5e3.netlify.app/)
 
 ## Getting Started
 
